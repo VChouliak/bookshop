@@ -1,4 +1,4 @@
-package com.bookstore.api.config;
+package com.bookstore.api.services;
 
 import com.bookstore.api.domain.security.entities.User;
 import com.bookstore.api.repositories.UserRepository;

@@ -13,7 +13,7 @@ public class Role implements Serializable {
     @Id
     private int roleId;
     private String name;
-    @OneToMany(mappedBy = "role", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "role", cascade = CascadeType.ALL,  fetch = FetchType.LAZY)
     private Set<UserRole> userRoles = new HashSet<>();
 
     public Role() {
@@ -24,6 +24,10 @@ public class Role implements Serializable {
         this.roleId = roleId;
         this.name = name;
         this.userRoles = userRoleSet;
+    }
+
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
     }
 
     public int getRoleId() {
